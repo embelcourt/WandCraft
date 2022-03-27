@@ -1,0 +1,16 @@
+[
+{
+  "modid": "WandCraft",
+  "name": "WandCraft",
+  "description": "WandCraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["luxtechllc","embelcourt"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
