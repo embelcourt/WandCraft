@@ -1,9 +1,9 @@
 [
 {
-  "modid": "WandCraft",
+  "modid": "wandcraft",
   "name": "WandCraft",
   "description": "WandCraft",
-  "version": "${version}",
+  "version": "0.1",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
