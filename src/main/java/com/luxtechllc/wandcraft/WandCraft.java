@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
 import com.luxtechllc.wandcraft.init.ModBlocks;
+import com.luxtechllc.wandcraft.init.ModItems;
 
 @Mod(modid = WandCraft.MODID, name = WandCraft.NAME, version = WandCraft.VERSION)
 public class WandCraft
@@ -23,6 +24,7 @@ public class WandCraft
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println("Starting preInit");
         ModBlocks.init();
+        ModItems.init();
         System.out.println("finished preInit");
     }
 

@@ -3,6 +3,7 @@ package com.luxtechllc.wandcraft.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -20,7 +21,7 @@ public class ModBlocks {
 	static Block testBlock;
 	
 	public static void init() {
-		testBlock = new BasicBlock("testBlock", Material.ROCK);
+		testBlock = new BasicBlock("testBlock", Material.ROCK).setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
 	
 	@SubscribeEvent
@@ -39,7 +40,7 @@ public class ModBlocks {
 	}
 	
 	public static void registerRender(Item item) {
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "normal"));
 	}
 	
 }
