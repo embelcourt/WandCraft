@@ -8,6 +8,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import org.w3c.dom.events.Event;
+
 import com.luxtechllc.wandcraft.WandCraft;
 import com.luxtechllc.wandcraft.items.BasicItem;
 
@@ -23,6 +25,11 @@ public class ModItems {
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(testItem);
+	}
+	
+	@SubscribeEvent
+	public static void registerItemsBlocks(RegistryEvent.Register<item> event) {
+		event.getRegistry().registerAll(new item(testItem).setRegistryName(testItem.getRegistryName()));
 	}
 	
 	@SubscribeEvent
