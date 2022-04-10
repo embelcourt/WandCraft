@@ -1,7 +1,7 @@
 {
-    "parent": "wandcraft:item/testItem",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "MODID:wandcraft:item/testItem"
+        "layer0": "wandcraft:item/testwand"
      },
      
     "display": {

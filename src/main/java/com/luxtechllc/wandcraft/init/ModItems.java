@@ -8,33 +8,26 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import org.w3c.dom.events.Event;
-
 import com.luxtechllc.wandcraft.WandCraft;
 import com.luxtechllc.wandcraft.items.BasicItem;
 
 @Mod.EventBusSubscriber(modid=WandCraft.MODID)
 public class ModItems {
 	
-	static Item testItem;
+	static Item testwand_item;
 	
 	public static void init() {
-		testItem = new BasicItem("testItem");
+		testwand_item = new BasicItem("testwand_item");
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(testItem);
-	}
-	
-	@SubscribeEvent
-	public static void registerItemsBlocks(RegistryEvent.Register<item> event) {
-		event.getRegistry().registerAll(new item(testItem).setRegistryName(testItem.getRegistryName()));
+		event.getRegistry().registerAll(testwand_item);
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		registerRender(testItem);
+		registerRender(testwand_item);
 	}
 	
 	private static void registerRender(Item item) {

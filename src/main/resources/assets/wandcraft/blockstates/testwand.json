@@ -1,5 +1,5 @@
 {
 	"variants":{
-		"normal": {"model": "wandcraft:block/testblock"}
+		"normal": {"model": "wandcraft:block/testwand"}
 	}
 }

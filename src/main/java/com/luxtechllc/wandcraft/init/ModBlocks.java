@@ -18,25 +18,25 @@ import com.luxtechllc.wandcraft.blocks.BasicBlock;
 @Mod.EventBusSubscriber(modid=WandCraft.MODID)
 public class ModBlocks {
 	
-	static Block testBlock;
+	static Block testwand;
 	
 	public static void init() {
-		testBlock = new BasicBlock("testBlock", Material.ROCK).setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		testwand = new BasicBlock("testwand", Material.ROCK).setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
 	
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().registerAll(testBlock);
+		event.getRegistry().registerAll(testwand);
 	}
 	
 	@SubscribeEvent
 	public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(new ItemBlock(testBlock).setRegistryName(testBlock.getRegistryName()));
+		event.getRegistry().registerAll(new ItemBlock(testwand).setRegistryName(testwand.getRegistryName()));
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		registerRender(Item.getItemFromBlock(testBlock));
+		registerRender(Item.getItemFromBlock(testwand));
 	}
 	
 	public static void registerRender(Item item) {
