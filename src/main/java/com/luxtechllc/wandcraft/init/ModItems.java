@@ -14,20 +14,20 @@ import com.luxtechllc.wandcraft.items.BasicItem;
 @Mod.EventBusSubscriber(modid=WandCraft.MODID)
 public class ModItems {
 	
-	static Item testItem;
+	static Item testwand_item;
 	
 	public static void init() {
-		testItem = new BasicItem("testItem");
+		testwand_item = new BasicItem("testwand_item");
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(testItem);
+		event.getRegistry().registerAll(testwand_item);
 	}
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		registerRender(testItem);
+		registerRender(testwand_item);
 	}
 	
 	private static void registerRender(Item item) {
