@@ -9,9 +9,14 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
 import org.apache.logging.log4j.Logger;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiLabel;
+import net.minecraft.client.gui.GuiScreen;
+
 
 import com.luxtechllc.wandcraft.init.ModBlocks;
 import com.luxtechllc.wandcraft.init.ModItems;
+import com.luxtechll.wandcraft.guis.SpellSelect;
 import com.luxtechllc.wandcraft.events.SpawnWater;
 
 @Mod(modid = WandCraft.MODID, name = WandCraft.NAME, version = WandCraft.VERSION)
@@ -22,13 +27,13 @@ public class WandCraft
     public static final String VERSION = "0.1";
 
     private static Logger logger;
-
-    
+	
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println("Starting preInit");
         ModBlocks.init();
         ModItems.init();
+        SpellSelect.init();
         System.out.println("finished preInit");
     }
 
