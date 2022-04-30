@@ -13,11 +13,11 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiLabel;
 import net.minecraft.client.gui.GuiScreen;
 
-
+import com.luxtechllc.wandcraft.init.Events;
 import com.luxtechllc.wandcraft.init.ModBlocks;
 import com.luxtechllc.wandcraft.init.ModItems;
-import com.luxtechll.wandcraft.guis.SpellSelect;
-import com.luxtechllc.wandcraft.events.SpawnWater;
+import com.luxtechllc.wandcraft.spells.SpawnWater;
+import com.luxtechllc.wandcraft.guis.SpellSelect;
 
 @Mod(modid = WandCraft.MODID, name = WandCraft.NAME, version = WandCraft.VERSION)
 public class WandCraft
@@ -33,7 +33,6 @@ public class WandCraft
         System.out.println("Starting preInit");
         ModBlocks.init();
         ModItems.init();
-        SpellSelect.init();
         System.out.println("finished preInit");
     }
 
@@ -48,6 +47,7 @@ public class WandCraft
     
     @EventHandler
     public void serverStarted(FMLServerStartedEvent event) {
-    	FMLCommonHandler.instance().bus().register(new SpawnWater());
+    	FMLCommonHandler.instance().bus().register(new Events());
     }
+    
 }
