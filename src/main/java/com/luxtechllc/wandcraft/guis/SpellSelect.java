@@ -47,13 +47,20 @@ public class SpellSelect extends GuiScreen{
 					currentSpell += 1;
 					SpellName.setText(SpellList[currentSpell]);
 				}
-				
+				else if (currentSpell == SpellList.length -1) {
+					currentSpell = 0;
+					SpellName.setText(SpellList[currentSpell]);
+				}
 				
 			}
 			else if (button == back) {
 				System.out.println("Back");
 				if(currentSpell-1 >= 0) {
 					currentSpell -= 1;
+					SpellName.setText(SpellList[currentSpell]);
+				}
+				else if (currentSpell == 0) {
+					currentSpell = SpellList.length -1;
 					SpellName.setText(SpellList[currentSpell]);
 				}
 			}
