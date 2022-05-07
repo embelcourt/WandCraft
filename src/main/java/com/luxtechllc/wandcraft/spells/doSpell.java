@@ -16,6 +16,9 @@ public class doSpell{
 			 	case 1:
 			 		SpawnWater.waterSpell();
 			 		break;
+			 	case 2:
+			 		KillSpell.killSpell();
+			 		break;
 			 }
 				 
 		 }

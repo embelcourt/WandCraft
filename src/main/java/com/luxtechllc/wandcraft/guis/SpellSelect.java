@@ -17,7 +17,7 @@ public class SpellSelect extends GuiScreen{
 	
 	private GuiTextField SpellName = new GuiTextField(0, fontRenderer, this.width, this.height, 300, 20);
 	
-	public static String[] SpellList = {"Fire","Water"};
+	public static String[] SpellList = {"Fire","Water","Avada Kedavra"};
 	
 	public static int currentSpell = 0; 
 	
