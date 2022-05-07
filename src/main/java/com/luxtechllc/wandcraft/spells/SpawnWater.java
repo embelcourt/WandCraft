@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.fml.common.eventhandler.Event;
 
-public class SpawnWater extends Event{
+public class SpawnWater{
 	 
 	public static void waterSpell() {
 		RayTraceResult lookingAtobj = Minecraft.getMinecraft().objectMouseOver;

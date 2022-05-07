@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.fml.common.eventhandler.Event;
 
-public class SpawnFire extends Event{
+public class SpawnFire{
 	 
 	public static void fireSpell() {
 		RayTraceResult lookingAtobj = Minecraft.getMinecraft().objectMouseOver;
