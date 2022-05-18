@@ -9,13 +9,14 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
 
 public class SpellSelect extends GuiScreen{
-	private GuiButton back = new GuiButton(0, this.width/2, this.height/2+20,"Back");
-	private GuiButton next = new GuiButton(1, this.width/2, this.height/2+40,"Next" );
-	private GuiButton close = new GuiButton(2, this.width/2, this.height/2+60,"Close");
+	private GuiButton back;
+	private GuiButton next;
+	private GuiButton close;
+	
 	
 	private FontRenderer fontRenderer = Minecraft.getMinecraft().fontRenderer;
 	
-	private GuiTextField SpellName = new GuiTextField(0, fontRenderer, this.width, this.height, 300, 20);
+	private GuiTextField SpellName;
 	
 	public static String[] SpellList = {"Fire","Water","Avada Kedavra"};
 	
@@ -24,6 +25,11 @@ public class SpellSelect extends GuiScreen{
 	@Override
 	public void initGui() {
 		super.initGui();
+		SpellName = new GuiTextField(0, fontRenderer, this.width/2-75, this.height/2-20, 150, 20);
+		back = new GuiButton(0, this.width/2-100, this.height/2+20,"Back");
+		next = new GuiButton(1, this.width/2-100, this.height/2+40,"Next" );
+		close = new GuiButton(2, this.width/2-100, this.height/2+60,"Close");
+		
 		this.buttonList.add(back);
 		this.buttonList.add(next);
 		this.buttonList.add(close);
@@ -70,7 +76,7 @@ public class SpellSelect extends GuiScreen{
 		public void drawScreen(int mouseX, int mouseY, float particalTicks) {
 			this.drawDefaultBackground();
 			super.drawScreen(mouseX, mouseY, particalTicks);
-			this.SpellName.drawTextBox();
+			SpellName.drawTextBox();
 		}
 		
 		@Override
