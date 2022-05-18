@@ -25,10 +25,10 @@ public class SpellSelect extends GuiScreen{
 	@Override
 	public void initGui() {
 		super.initGui();
-		GuiTextField SpellName = new GuiTextField(0, fontRenderer, this.width, this.height, 300, 20);
-		GuiButton back = new GuiButton(0, this.width/2-100, this.height/2,"Back");
-		GuiButton next = new GuiButton(1, this.width/2-100, this.height/2+40,"Next" );
-		GuiButton close = new GuiButton(2, this.width/2-100, this.height/2+60,"Close");
+		SpellName = new GuiTextField(0, fontRenderer, this.width/2-75, this.height/2-20, 150, 20);
+		back = new GuiButton(0, this.width/2-100, this.height/2+20,"Back");
+		next = new GuiButton(1, this.width/2-100, this.height/2+40,"Next" );
+		close = new GuiButton(2, this.width/2-100, this.height/2+60,"Close");
 		
 		this.buttonList.add(back);
 		this.buttonList.add(next);
