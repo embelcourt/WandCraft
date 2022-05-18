@@ -1,6 +1,5 @@
 package com.luxtechllc.wandcraft;
 
-import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -8,16 +7,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
-import org.apache.logging.log4j.Logger;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiLabel;
-import net.minecraft.client.gui.GuiScreen;
-
 import com.luxtechllc.wandcraft.init.Events;
 import com.luxtechllc.wandcraft.init.ModBlocks;
 import com.luxtechllc.wandcraft.init.ModItems;
-import com.luxtechllc.wandcraft.spells.SpawnWater;
-import com.luxtechllc.wandcraft.guis.SpellSelect;
 
 @Mod(modid = WandCraft.MODID, name = WandCraft.NAME, version = WandCraft.VERSION)
 public class WandCraft
@@ -25,8 +17,6 @@ public class WandCraft
     public static final String MODID = "wandcraft";
     public static final String NAME = "WandCraft";
     public static final String VERSION = "0.1";
-
-    private static Logger logger;
 	
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {

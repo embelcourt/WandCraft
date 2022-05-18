@@ -1,7 +1,6 @@
 package com.luxtechllc.wandcraft.spells;
 
 import com.luxtechllc.wandcraft.guis.SpellSelect;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class doSpell{
 	
